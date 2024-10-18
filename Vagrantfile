@@ -7,6 +7,8 @@ Vagrant.configure("2") do |config|
     master.vm.provision "shell", name: "update", inline: <<-SHELL
       sudo apt-get update
       sudo apt-get install -y bind9
+      cp -v /vagrant/named /etc/default/named
+      sudo systemctl restart named
     SHELL
   end
 
@@ -16,6 +18,8 @@ Vagrant.configure("2") do |config|
     dnslave.vm.provision "shell", name: "update", inline: <<-SHELL
       sudo apt-get update
       sudo apt-get install -y bind9
+      cp -v /vagrant/named /etc/default/named
+      sudo systemctl restart named
     SHELL
   end
 end
