@@ -1,0 +1,21 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "sistema.test" {
+    type master;
+    file "/var/lib/bind/sistema.test.dns";
+    allow-transfer { 192.168.57.102; };
+    allow-query { 127.0.0.0/8; 192.168.57.0/24; };
+};
+
+zone "57.168.192.in-addr.arpa" {
+    type master;
+    file "/var/lib/bind/192.168.57.rev";
+    allow-transfer { 192.168.57.102; };
+    allow-query { 127.0.0.0/8; 192.168.57.0/24; };
+};

@@ -10,6 +10,8 @@ Vagrant.configure("2") do |config|
       cp -v /vagrant/named /etc/default/named
       sudo systemctl restart named
       cp -v /vagrant/named.conf.options /etc/bind/named.conf.options
+      cp -v /vagrant/tierra_files/named.conf.local /etc/bind/named.conf.local
+      cp -v /vagrant/tierra_files/sistema.test.dns /var/lib/bind/sistema.test.dns
       sudo systemctl restart bind9
     SHELL
   end
@@ -23,8 +25,8 @@ Vagrant.configure("2") do |config|
       cp -v /vagrant/named /etc/default/named
       sudo systemctl restart named
       cp -v /vagrant/named.conf.options /etc/bind/named.conf.options
+      cp -v /vagrant/venus_files/named.conf.local /etc/bind/named.conf.local
       sudo systemctl restart bind9
     SHELL
   end
 end
-
