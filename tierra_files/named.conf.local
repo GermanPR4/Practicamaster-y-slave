@@ -15,7 +15,7 @@ zone "sistema.test" {
 
 zone "57.168.192.in-addr.arpa" {
     type master;
-    file "/var/lib/bind/192.168.57.rev";
+    file "/var/lib/bind/57.168.192.in-addr.arpa.dns";
     allow-transfer { 192.168.57.102; };
     allow-query { 127.0.0.0/8; 192.168.57.0/24; };
 };

@@ -3,13 +3,16 @@
 ;
 $TTL 86400
 @ IN SOA tierra.sistema.test. admin.sistema.test. (
-    1          ; Serial
+    2          ; Serial
     3600       ; Refresh
     1800       ; Retry
     604800     ; Expire
-    86400      ; Negative Cache TTL
+    7200      ; Negative Cache TTL
 )
 ;
 @ IN NS tierra.sistema.test.
+sistema.test. IN  A   192.168.57.103
 tierra.sistema.test. IN A 192.168.57.103
 venus.sistema.test. IN A 192.168.57.102
+mercurio.sistema.test. IN A 192.168.57.101
+marte.sistema.test. IN A 192.168.57.104

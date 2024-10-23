@@ -1,4 +1,4 @@
-Vagrant.configure("2") do |config|
+Vagrant.configure("2") do |config| 
   config.vm.box = "debian/bookworm64"
 
   config.vm.define "master" do |master|
@@ -12,6 +12,8 @@ Vagrant.configure("2") do |config|
       cp -v /vagrant/named.conf.options /etc/bind/named.conf.options
       cp -v /vagrant/tierra_files/named.conf.local /etc/bind/named.conf.local
       cp -v /vagrant/tierra_files/sistema.test.dns /var/lib/bind/sistema.test.dns
+      cp -v /vagrant/tierra_files/57.168.192.in-addr.arpa.dns /var/lib/bind/57.168.192.in-addr.arpa.dns
+      cp -v /vagrant/tierra_files/resolv.conf /etc/resolv.conf
       sudo systemctl restart bind9
     SHELL
   end

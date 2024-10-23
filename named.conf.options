@@ -10,6 +10,7 @@ options {
 
 	recursion yes;
     allow-recursion { redesPermitidas; };
+	allow-query { redesPermitidas; };
 
 	// forwarders {
 	// 	0.0.0.0;
