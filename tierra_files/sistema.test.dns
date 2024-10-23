@@ -16,3 +16,12 @@ tierra.sistema.test. IN A 192.168.57.103
 venus.sistema.test. IN A 192.168.57.102
 mercurio.sistema.test. IN A 192.168.57.101
 marte.sistema.test. IN A 192.168.57.104
+
+; Alias
+ns1 IN CNAME tierra.sistema.test.
+ns2 IN CNAME venus.sistema.test.
+
+mail.sistema.test. IN CNAME marte.sistema.test.
+
+; Registro MX (servidor de correo)
+@ IN MX 10 marte.sistema.test.
